@@ -1,0 +1,139 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content = "width=device-width, initial-scale = 1,
+  shrink-to-fit = no">
+
+  {% load staticfiles %}
+
+  <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  <title>About Food Driven</title>
+</head>
+
+<style>
+
+.header{
+  color: darkgreen;
+  border-bottom: 3px solid black;
+}
+
+.subject{
+  color: darkgreen;
+}
+
+.body{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.info{
+  font-size:  20px;
+}
+
+
+.form {
+  margin-top: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 500px, 0);
+          transform: translate3d(0, 500px, 0);
+  -webkit-animation: arrive 500ms ease-in-out 0.9s forwards;
+          animation: arrive 500ms ease-in-out 0.9s forwards;
+}
+
+.form--no {
+  -webkit-animation: NO 1s ease-in-out;
+          animation: NO 1s ease-in-out;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-family: "Roboto";
+  -webkit-appearance: none;
+  border: 1;
+  outline: 1;
+  transition: 0.3s;
+}
+.form__input:focus {
+  background: #f7f7f7;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-family: "Roboto";
+  -webkit-appearance: none;
+  outline: 0;
+  border: 0;
+  color: white;
+  background: darkgreen;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #a09486;
+}
+
+</style>
+
+<body>
+  {% include "Registration/navBar.html" %}
+<div class="container-fluid">
+  <h1 class="header">About FoodDriven</h1>
+  <br>
+  <br>
+  <h2 class="subject">Registration Process</h2>
+  <br>
+  <p class="info">&nbsp&nbsp&nbsp&nbspThe first thing to the registration process is to understand what you are
+    registering for.  The registration page is a page to let FoodDriven know that
+    you have goods to be picked up.  You can register by clicking the 'register' tab on the top of the webpage.  The registration includes:  name, email,
+    home address, city, state, and pickup-date.  This information will let the drivers
+    of FoodDriven know where and when donations are being picked up.  Any registrant should
+    put the pickup-date for at least 2 days in advance to help FoodDriven organize
+    pickup trips.  You will get an e-mail confirmation that your registration has been
+    received.  </p>
+  <h2 class="subject">Location</h2>
+  <br>
+  <p class="info">&nbsp&nbsp&nbsp&nbspFoodDriven is located in Northwest Indiana.  Due to restrictions,
+    most likely any registrant outside the Northwest Indiana region will be sadly refused the service
+    until expansion of the organization takes place.</p>
+  <br>
+  <div class="container">
+    <h1 class="subject" style="text-align: center;">Questions</h1>
+    <form class="question_form" method="post" action="/addQuestion/">
+      {% csrf_token %}
+
+      <div class="textbox">
+          <input name =question_email type="text" placeholder="Email" class="form__input" />
+      </div>
+
+        <div class="textbox">
+            <input name =question type="text" placeholder="Question" class="form__input" />
+        </div>
+
+        <div class="textbox">
+        <button class="btn" type="submit">Submit</button>
+      </div>
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+  {% include "Registration/footer.html" %}
+
+</body>
+</html>
+{% endblock %}

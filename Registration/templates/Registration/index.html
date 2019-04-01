@@ -1,0 +1,173 @@
+ {% extends "Registration/header.html" %}
+
+ {% block content %}
+
+ {% include "Registration/navBar.html" %}
+
+{% load staticfiles %}
+{% load static %}
+<style>
+
+.mainHeader{
+  box-sizing: border-box;
+  color: darkgreen;
+  text-align: center;
+  border-bottom: 3px solid black;
+  width: 100%;
+
+}
+
+.explan{
+  padding-right: 5px;
+}
+
+.founders{
+  text-align: center;
+  color: darkgreen;
+  border-bottom: 3px solid black;
+}
+
+.container-fluid{
+  margin-top:50px;
+}
+
+.mainImage{
+  border-top:  3px solid black;
+  border-bottom:  3px solid black;
+}
+
+.names{
+  font-size: 24px;
+  text-align: center;
+  color: darkgreen;
+}
+
+.row{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+
+.center{
+  display:  block;
+  margin-left:  auto;
+  margin-right: auto;
+  width:  50%;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:  darkgreen;
+  color: white;
+  text-align: center;
+}
+</style>
+
+{% load staticfiles %}
+  <div class="mainImage">
+    <img src="{% static "images/mainHeader.jpg" %}" alt="Indiana Welcome Center"/>
+  </div>
+
+ <div class="container-fluid">
+   <div class="row">
+     <div class="col-8">
+       <div class="row">
+         <h1 class="mainHeader">Our Vision</h1>
+         <p class="explan">&nbsp&nbsp&nbsp&nbspTo provide a fast and efficient mode of transportation
+       for donated goods to food banks around the Northwest Indiana region.  We
+      want to be able to keep local food banks stocked with goods in order to
+        effectively aid in ending food insecurity in Northwest Indiana.
+        </p>
+      </div>
+      <div class="row">
+        <img src="{% static "images/nwi.jpg" %}" alt="Northwest Indiana" class = "center"/>
+      </div>
+      <div class="row">
+        <h1 class="mainHeader">How FoodDriven Works</h1>
+        <p class="explan">&nbsp&nbsp&nbsp&nbspFoodDriven is a non-profit organization that makes it
+        convenient to donate goods.  The base of the organization begins with the
+        "Driven" part of the name.  We receive addresses and times for pickup
+        through our registration page (linked in the navigation bar) and send out designated drivers to receive
+        your donations.  The donations go through inspection and are then dropped
+        off at the local Food Bank.  Although food is emphasized in the organization's
+        name, we accept unexpired, non-perishable food, new/lightly used clothing items, new hygiene products,
+         and toys/games.
+        </p>
+      </div>
+      <div class="row">
+        <img src="{% static "images/food.png" %}" alt="Food" class="center"/>
+      </div>
+
+      <div class="row">
+        <h1 class="mainHeader">Why Choose FoodDriven</h1>
+        <p class="explan">&nbsp&nbsp&nbsp&nbspFoodDriven is a 21st century adaptation to the donation
+          and collection of goods.  Just like Uber and GrubHub, FoodDriven is a convenient
+          way to take on a task.  Instead of coming around once a year like a postal service,
+          we manage our time with the simple submission of a form.  Once a form is submitted,
+          the goods will be picked up from your doorstep.  There is no driving, paying,
+          or really anything but preparing your goods for the doorstep.  This free,
+          easy-to-use service has great potential in bringing many participants
+          to donate goods.
+        </p>
+      </div>
+     </div>
+     <div class="col">
+       <h1 class ="founders">Founders</h1>
+       <div class="row justify-content-around">
+         <div class="col">
+         <h1 class="names">Joey Lopez</h1>
+         <img src="{% static "images/joeyPortrait.png" %}" style = "display:  block;
+         margin-left:  auto; margin-right:  auto; height:  60%;"/>
+         </div>
+         <div class="col">
+           <p class="about">Joey Lopez is a student at Lake Central High School
+           that is intrigued with engineering and computer science.  He is the
+           developer of the website and wishes that this project will help
+            him understand more about computers.  In his future, Joey wishes to
+            go to college for Aerospace Engineering with a minor in computer science.
+            </p>
+         </div>
+       </div>
+       <div class="row justify-content-around">
+         <div class="col">
+         <h1 class="names">Connor Kaurich</h1>
+         </div>
+         <div class="col">
+           <p class=about">Connor is an honors student at Lake Central High School
+           who enjoys science, math, and hanging out with his friends.  He is also
+         the president of the Future Medical Professional's club at LC, and has plans
+       of becoming an oncologist later in his life.</p>
+         </div>
+       </div>
+
+
+       <div class="row justify-content-around">
+         <div class="col">
+         <h1 class="names">Hamza Abughofah</h1>
+         </div>
+         <div class="col">
+           <p class="about">Hamza is a student at Lake Central High School
+              that excels both at school and beyond.  He plays soccer and is interested
+              in sciences and philosophy.  In the future, Hamza hopes to become a psychologist.</p>
+         </div>
+       </div>
+  </div>
+  </div>
+  </div>
+  <div class="row" style = "border-top:  25px solid black;">
+    <img src="{%static "images/logo.png" %}" style = "display:  block;
+    margin-left:  auto; margin-right:  auto; height:  60%;"/>
+  </div>
+
+  <div class="row">
+    <strong style = "font-size: 32px; margin-left: auto; margin-right: auto;
+    color: darkgreen;">Register Today!</strong>
+  </div>
+
+  {% include "Registration/footer.html" %}
+
+</div>
+ {% endblock %}
